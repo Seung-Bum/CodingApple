@@ -10,9 +10,9 @@ function App() {
   let [따봉, 따봉변경] = useState(0);
 
   // deep copy
-  function 제목바꾸기() {
-    var newArray = [...글제목]; // 참조형 데이터
-    newArray[0] = '여자 코트 추천';
+  function 글자순정렬() {
+    var newArray = [...글제목];
+    newArray = newArray.sort()
     글제목변경( newArray );
   }
 
@@ -22,7 +22,7 @@ function App() {
         <div className="black-nav">
           <div>개발 Blog</div>
         </div>
-        <button onClick={ 제목바꾸기 } >버튼</button>
+        <button onClick={ 글자순정렬 } >버튼</button>
         <div className="list">
           <h3> { 글제목[0] } <span onClick={ ()=>{따봉변경( 따봉 + 1 )} }>👍</span>{따봉}</h3>
           <p>2월 17일 발행</p>

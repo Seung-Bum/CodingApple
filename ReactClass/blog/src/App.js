@@ -17,30 +17,43 @@ function App() {
   }
 
   return (
+
     <div className="App">
-      <div className="App">
-        <div className="black-nav">
-          <div>개발 Blog</div>
-        </div>
-        <button onClick={ 글자순정렬 } >버튼</button>
-        <div className="list">
-          <h3> { 글제목[0] } <span onClick={ ()=>{따봉변경( 따봉 + 1 )} }>👍</span>{따봉}</h3>
-          <p>2월 17일 발행</p>
-          <hr></hr>
-        </div>
-        <div className="list">
-          <h3> { 글제목[1] } </h3>
-          <p>3월 17일 발행</p>
-          <hr></hr>
-        </div>
-        <div className="list">
-          <h3> { 글제목[2] } </h3>
-          <p>2월 17일 발행</p>
-          <hr></hr>
-        </div>
+      <div className="black-nav">
+        <div>개발 Blog</div>
       </div>
+      <button onClick={ 글자순정렬 } >버튼</button>
+      <div className="list">
+        <h3> { 글제목[0] } <span onClick={ ()=>{따봉변경( 따봉 + 1 )} }>👍</span>{따봉}</h3>
+        <p>2월 17일 발행</p>
+        <hr></hr>
+      </div>
+      <div className="list">
+        <h3> { 글제목[1] } </h3>
+        <p>3월 17일 발행</p>
+        <hr></hr>
+      </div>
+      <div className="list">
+        <h3> { 글제목[2] } </h3>
+        <p>2월 17일 발행</p>
+        <hr></hr>
+      </div>
+
+      <Modal /> 
+
     </div>
+
   );
+}
+
+function Modal(){
+  return (
+    <div className='modal'>
+      <h2>제목</h2>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  )
 }
 
 export default App;
